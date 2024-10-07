@@ -1,0 +1,44 @@
+# config.yaml
+
+# Database Configuration
+database:
+  uri: "mongodb://localhost:27017"
+  name: "traffic_control"
+
+# Mail Configuration
+mail:
+  smtp:
+    host: "sandbox.smtp.mailtrap.io"
+    port: 2525
+    username: "48b1326a30f68b"
+    password: "7343588c5713cf"
+  sender: "from@example.com"
+
+# Service URLs
+services:
+  entry_cam_url: "http://localhost:6000/entrycam"
+  exit_cam_url: "http://localhost:6000/exitcam"
+  vehicle_info_service: "http://localhost:6002/vehicleinfo"
+  collect_fine_service: "http://localhost:6001/collectfine"
+
+# Application Settings
+app:
+  lanes: 1
+  num_vehicles: 5
+  simulation_delay_range:
+    min_seconds: 1
+    max_seconds: 100
+
+# FastAPI Ports
+fastapi_ports:
+  vehicle_state_service: 6000
+  collect_fine_service: 6001
+  vehicle_info_service: 6002
+
+# RabbitMQ Configuration
+rabbitmq:
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest
+  virtual_host: /
